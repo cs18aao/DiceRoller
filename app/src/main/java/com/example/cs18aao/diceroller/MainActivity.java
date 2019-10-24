@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void on_button_click (View view){
+    public void roll_the_dice (View view){
 
         TextView tv = (TextView) this.findViewById(R.id.textView);
 
@@ -95,6 +95,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void D_ICE (View view){
+
+        TextView tv = (TextView) this.findViewById(R.id.textView);
+
+        Random r = new Random();
+        String question = r.
+    }
 }
 
 
