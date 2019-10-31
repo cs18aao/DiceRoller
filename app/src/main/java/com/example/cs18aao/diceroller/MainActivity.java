@@ -12,8 +12,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
+import static android.R.id.list;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -95,14 +97,34 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void D_ICE (View view){
+    public void D_ICE (View view) {
 
         TextView tv = (TextView) this.findViewById(R.id.textView);
 
-        Random r = new Random();
-        String question = r.
+
+
+        List<String> question = new ArrayList<>();
+        question.add("If you could go anywhere in the world, where would you go?");
+        question.add("If you were stranded on a desert island, what three things would you want to take with you?");
+        question.add("If you could eat only one food for the rest of your life, what would that be?");
+        question.add("If you won a million dollars, what is the first thing you would buy?");
+        question.add("If you could spend the day with one fictional character, who would it be?");
+        question.add("If you found a magic lantern and a genie gave you three wishes, what would you wish?");
+
+        MainActivity obj = new MainActivity();
+        String que = getRandomElement(question);
+
+        Toast.makeText(this, obj.getRandomElement(question),Toast.LENGTH_SHORT).show();
+
     }
-}
+    public String getRandomElement(List<String> question){
+        Random r = new Random();
+        return question.get(r.nextInt(question.size()));
+    }
+
+
+    }
+
 
 
 
