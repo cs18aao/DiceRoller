@@ -1,5 +1,6 @@
 package com.example.cs18aao.diceroller;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -121,6 +122,18 @@ public class MainActivity extends AppCompatActivity {
         Random r = new Random();
         return question.get(r.nextInt(question.size()));
     }
+
+    public void NewDIce (View view) {
+        Intent i = new Intent(MainActivity.this, newDice.class);
+        startActivity(i);
+    }
+
+    public void finish (View view) {
+        Intent i = new Intent(MainActivity.this, ScoreShare.class);
+        startActivity(i);
+    }
+
+
 
 
     }

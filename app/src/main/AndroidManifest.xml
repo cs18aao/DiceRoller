@@ -19,6 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".newDice" />
+        <activity android:name=".ScoreShare"></activity>
     </application>
 
 </manifest>
