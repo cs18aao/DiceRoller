@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         TextView tv = (TextView) this.findViewById(R.id.textView);
 
         Random r = new Random();
-        int number = r.nextInt(6);
+        int number = r.nextInt(7);
 
         tv.setText(Integer.toString(number));
 
